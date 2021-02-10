@@ -5,7 +5,7 @@
 rtools_path <- paste0(strsplit(getwd(), "/")[[1]][1], "\\R\\rtools40\\usr\\bin")
 
 # git path
-git_path <- paste0(strsplit(getwd(), "/")[[1]][1], "\\Git\\bin\\bash.exe")
+git_path <- paste0(strsplit(getwd(), "/")[[1]][1], "\\Git\\bin")
 
 # append rtools and git to PATH
 Sys.setenv(PATH = paste(rtools_path, 
@@ -15,7 +15,7 @@ Sys.setenv(BINPREF = paste0(rtools_path, "mingw$(WIN)/bin/"))
 rm(rtools_path)
 
 
-# system(`bash --login -i -c "git config user.name "brettmrice"`)
+# system2("gitconfig.sh")
 
 # require(devtools)
 # install_version("", version = "", repos = "http://cran.us.r-project.org")
